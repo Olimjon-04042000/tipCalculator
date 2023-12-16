@@ -1,6 +1,9 @@
 const inputPrice = document.querySelector('.inputPrice');
 const btns = document.querySelectorAll('.btns');
 const personNumber = document.querySelector('.personNumber');
+const amount = document.querySelector('.amount');
+const totalAmount = document.querySelector('.total-amount');
+const resetBtn = document.querySelector('.reset-btn');
 let selectTip;
 
 
@@ -12,13 +15,19 @@ btns.forEach(function(btn) {
     })
 })
 personNumber.addEventListener("input", function(event) {
-    // console.log(event.target.value);
     if (inputPrice.value) {
-        console.log(inputPrice.value);
 
-        let sum = inputPrice.value + (inputPrice.value / 100) * selectTip;
-        console.log(sum);
-
+        let sum = (+inputPrice.value + (inputPrice.value / 100) * selectTip).toFixed(2);
+        let amountOne = (sum / personNumber.value).toFixed(2);
+        totalAmount.innerHTML = `$${sum}`;
+        amount.innerHTML = `$${amountOne}`
 
     }
+})
+resetBtn.addEventListener('click', function() {
+    totalAmount.textContent = 0;
+    amount.textContent = 0;
+    inputPrice.value = '';
+    personNumber.value = '';
+    selectTip = 0;
 })
