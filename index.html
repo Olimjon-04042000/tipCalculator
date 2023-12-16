@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.20/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+
+<body class=" bg-blue-200 h-full  pt-10">
+    <div class=" flex justify-between rounded-3xl p-8 pl-12 mx-auto w-[60.6vw] bg-white containe">
+        <div class="price pl-1">
+            <h2 class="text-teal-700 mb-1.5">Bill</h2>
+            <input type="number" placeholder="$" class="inputPrice placeholder:text-inherit text-right text-teal-700 bg-gray-100 input w-full" />
+            <h2 class="text-teal-700 mb-4 mt-10">Select Tip %</h2>
+            <div class=" flex mb-10 flex-wrap gap-3.5 w-96 btns">
+                <button class="btns text-white text-lg  pr-12 pl-11 bg-cyan-950 btn btn-success" value="5"> 5% </button>
+                <button class="btns text-white text-lg  pr-11 pl-10 bg-cyan-950 btn btn-success" value="10"> 10% </button>
+                <button class="btns text-white text-lg  pr-11 pl-10 bg-cyan-950 btn btn-success" value="15"> 15% </button>
+                <button class="btns text-white text-lg  pr-10 pl-10 bg-cyan-950 btn btn-success" value="25"> 25% </button>
+                <button class="btns text-white text-lg  pr-11 pl-10 bg-cyan-950 btn btn-success" value="50"> 50% </button>
+                <button class="pr-7 pl-6 text-lg btn text-teal-700 "> Custom</button></div>
+            <h2 class="text-teal-700 mb-1.5">Number of People</h2>
+            <input type="number" placeholder="Type here" class=" personNumber placeholder:text-inherit text-right text-teal-700 bg-gray-100 input w-full " />
+
+        </div>
+        <div class="expense p-10 bg-cyan-950 rounded-3xl  w-[27.2vw]">
+            <div class="flex justify-between">
+                <div class="mb-6">
+                    <span class="text-white">Tip Amount</span><br>
+                    <span class="text-teal-500">/ person</span>
+                </div>
+                <p class="text-teal-500 text-5xl font-bold">$4.27</p>
+            </div>
+            <div class="flex justify-between mb-40">
+                <div>
+                    <span class="text-white">Total</span><br>
+                    <span class="text-teal-500">/ person</span>
+                </div>
+                <p class="text-teal-500 text-5xl font-bold">$32.79</p>
+            </div>
+            <button class="bg-teal-500 text-xl text-cyan-950 btn btn-success w-full mt-1">RESET</button>
+
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
